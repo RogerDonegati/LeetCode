@@ -8,9 +8,9 @@ def threeSum(nums: list[int], searched: int) -> list[list[int]]:
         j = i+1
         k = len(nums) -1
         while  j < k:
-            if nums[i] + nums[j] + nums[k] > 0:
+            if nums[i] + nums[j] + nums[k] > searched:
                 k -= 1
-            elif nums[i] + nums[j] + nums[k] < 0:
+            elif nums[i] + nums[j] + nums[k] < searched:
                 j += 1
             else:
                 results.append([nums[i], nums[j], nums[k]])
