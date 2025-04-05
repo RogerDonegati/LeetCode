@@ -20,12 +20,26 @@ def reverseList(head: ListNode) -> ListNode:
     node.next = previous
     return node
 
+def deleteDuplicates(head: ListNode) -> ListNode:
+    previousNode = head
+    node = head.next
+    while node:
+        if node.val == previousNode.val:
+            previousNode.next = node.next
+        node = node.next
+
+    return head
 
 head = node = ListNode(1)
 for i in range(2,5):
     node.next = ListNode(i)
     node = node.next
 
-print(reverseList(head)) 
+node.next = ListNode(i)
+
+print(deleteDuplicates(head)) 
+
+
+
 
 
