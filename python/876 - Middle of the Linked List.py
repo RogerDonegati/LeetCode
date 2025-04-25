@@ -7,13 +7,9 @@ def middleNode(head: ListNode) -> ListNode:
     if not head.next:
         return head
 
-    node = head
-    fast_node = head.next
-
-    while fast_node:
-        fast_node = fast_node.next
-        if fast_node:
-            fast_node = fast_node.next
+    node = fast_node = head
+    while fast_node and fast_node.next:
+        fast_node = fast_node.next.next
         node = node.next
 
     return node
