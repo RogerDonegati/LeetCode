@@ -20,5 +20,4 @@ def copyRandomList(head: list[Node]) -> list[Node]:
         aux_node.random = hash_map.get(node.random)
         node = node.next
     
-    return hash_map.get(head
-)
+    return hash_map.get(head)
