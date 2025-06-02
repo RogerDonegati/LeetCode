@@ -1,3 +1,6 @@
+# time complexity
+# O((V+E)logV)
+
 import heapq
 
 def dijkstra(graph, target):

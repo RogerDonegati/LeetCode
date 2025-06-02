@@ -1,3 +1,6 @@
+# time complexity
+# (n^2)
+
 def bubbleSort(my_array):
     n = len(my_array)
     interactions = 0
